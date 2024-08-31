@@ -41,7 +41,7 @@ export default function IngredientSearch() {
       )}
       {suggestions.length === 0 && query !== "" && (
         <div className="mt-3">
-          Could not find any ingredient based on you input "{query}"
+          Could not find any ingredient based on you input &quot;{query}&quot;
         </div>
       )}
       <ul className="flex flex-wrap gap-4 w-full">
