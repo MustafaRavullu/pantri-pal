@@ -1,7 +1,7 @@
 import { IoIosSearch } from "react-icons/io";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-[5rem] md:text-[10rem] font-thin">PantriPal</h1>

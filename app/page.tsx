@@ -1,11 +1,11 @@
-import Hero from "@/components/hero";
-import IngredientSearch from "@/components/ingredient-search";
+import HeroSection from "@/components/hero-section";
+import IngredientSearchSection from "@/components/ingredient-search-section";
 
 export default async function Home() {
   return (
-    <main className="">
-      <Hero />
-      <IngredientSearch />
+    <main>
+      <HeroSection />
+      <IngredientSearchSection />
     </main>
   );
 }
