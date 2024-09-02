@@ -19,7 +19,7 @@ export default function IngredientSearchInput() {
     });
   }, 300);
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 mb-8">
       <input
         onChange={(event) => handleSearch(event.target.value)}
         defaultValue={searchParams.get("query")?.toString()}
