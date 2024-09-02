@@ -1,11 +1,11 @@
-import IngredientSearchItem from "./ingredient-search-item";
+import IngredientSearchList from "./ingredient-search-list";
 
-type Ingredient = {
+export type Ingredient = {
   name: string;
   image: string;
 };
 
-export default async function IngredientSearchList({
+export default async function IngredientSearchResults({
   query,
 }: {
   query: string;
@@ -24,11 +24,5 @@ export default async function IngredientSearchList({
     return <div>No ingredients found.</div>;
   }
 
-  return (
-    <ul className="flex flex-wrap gap-6">
-      {ingredients.map((ingredient: Ingredient, index: number) => (
-        <IngredientSearchItem key={index} name={ingredient.name} />
-      ))}
-    </ul>
-  );
+  return <IngredientSearchList ingredients={ingredients} />;
 }
