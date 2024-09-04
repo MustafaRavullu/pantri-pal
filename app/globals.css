@@ -11,3 +11,14 @@ html {
   width: 0;
   background: transparent;
 }
+
+@layer utilities {
+  .clipped {
+    clip-path: inset(5px round 5px 5px 5px 5px);
+    transition: clip-path 400ms;
+  }
+  .zero-clipped {
+    clip-path: inset(0px round 0px 0px 0px 0px);
+    transition: clip-path 400ms;
+  }
+}
