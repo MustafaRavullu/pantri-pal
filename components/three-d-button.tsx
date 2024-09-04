@@ -4,6 +4,7 @@ type ThreeDButtonBaseProps = {
   children: React.ReactNode;
   bgStyles?: string;
   btnStyles?: string;
+  target?: "_blank";
 };
 
 type ThreeDButtonLinkProps = ThreeDButtonBaseProps & {
@@ -27,10 +28,15 @@ export default function ThreeDButton({
   children,
   bgStyles,
   btnStyles,
+  target,
 }: ThreeDButtonProps) {
   if (type === "link" && href) {
     return (
-      <Link href={href} className={`${bgStyles} bg-black z-0 group`}>
+      <Link
+        href={href}
+        className={`${bgStyles} bg-black z-0 group`}
+        target={target && target}
+      >
         <div
           className={`${btnStyles} p-4 border bg-white 
          border-black  transition-all z-10 group-hover:translate-x-2 group-hover:-translate-y-2`}

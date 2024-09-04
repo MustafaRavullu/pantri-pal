@@ -2,10 +2,16 @@ import { Recipe } from "@/app/results/page";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SearchResultCard({ recipe }: { recipe: Recipe }) {
+export default function SearchResultCard({
+  recipe,
+  callbackUrl,
+}: {
+  recipe: Recipe;
+  callbackUrl: string;
+}) {
   return (
     <Link
-      href={`/results/${recipe.id}`}
+      href={`/results/${recipe.id}?callbackUrl=${callbackUrl}`}
       className="border border-black group hover:bg-black hover:text-white transition-all flex flex-col w-[312px]"
     >
       <div className="bg-black">

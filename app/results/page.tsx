@@ -1,7 +1,5 @@
 import SearchResultCard from "@/components/search-result-card";
 import ThreeDButton from "@/components/three-d-button";
-import Image from "next/image";
-import Link from "next/link";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
 export type Recipe = {
@@ -52,7 +50,11 @@ export default async function ResultsPage({
       </section>
       <section className="mx-auto max-w-screen-lg flex justify-center flex-wrap gap-8">
         {recipes.map((recipe: Recipe) => (
-          <SearchResultCard recipe={recipe} key={recipe.id} />
+          <SearchResultCard
+            recipe={recipe}
+            key={recipe.id}
+            callbackUrl={`/results?ingredients=${searchParams.ingredients}`}
+          />
         ))}
       </section>
     </main>
